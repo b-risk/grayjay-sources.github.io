@@ -4412,26 +4412,61 @@
   },
   {
     "name": "media.ccc.de",
-    "description": "A video platform which offers a wide variety of video and audio material distributed by the Chaos Computer Club",
-    "author": "Alex",
-    "authorUrl": "https://github.com/Alex-451",
-    "sourceUrl": "https://raw.githubusercontent.com/Alex-451/grayjay-media.ccc-plugin/main/MediaCccConfig.json",
-    "repositoryUrl": "https://github.com/Alex-451/grayjay-media.ccc-plugin",
-    "scriptUrl": "https://raw.githubusercontent.com/Alex-451/grayjay-media.ccc-plugin/main/src/MediaCccScript.js",
-    "version": 1,
-    "iconUrl": "https://raw.githubusercontent.com/Alex-451/grayjay-media.ccc-plugin/main/MediaCccLogo.png",
-    "id": "ccc221a2-4845-4ecf-9fa4-8b12958d2455",
+    "description": "media.ccc.de is the video portal of the Chaos Computer Club. Browse and search 15,000+ recordings from CCC congresses, camps, and community events.",
+    "author": "OnlinePersona & PixelMelt",
+    "authorUrl": "https://github.com/PixelMelt",
+    "platformUrl": "https://media.ccc.de",
+    "sourceUrl": "https://raw.githubusercontent.com/PixelMelt/grayjay-source-ccc/master/MediaCCCConfig.json",
+    "repositoryUrl": "https://github.com/PixelMelt/grayjay-source-ccc",
+    "scriptUrl": "./MediaCCCScript.js",
+    "version": 2,
+    "iconUrl": "./MediaCCCIcon.png",
+    "id": "c6a1e360-1d8a-4b9d-8c1a-2e3b4c5d6e7f",
+    "scriptSignature": "LcpwYqkm/BaBWKLpeiNtiZ0zIUwDuA57bsqVnw8WaBcoci2+sDpATeIvsE5f9WaEZZDHT1ZuX7EApwyghQVfW1OAn7TcUhZaKrMXCoVELgtvhz8sgXAxyJ4dKXF1HfGyIJWYv4dgOyHvX0OEZJxSqrsYfYVkPkUsj/VHoD74vHb50h70Wt3KPifFN3xcdAMtUe0nP2tSwGjLcRBVgjRSed9saiWf0nJtDblYd/3JF6FW8oRZsP3QVxhBcEkBOdICHxbyfxfBDgeVQsIovE4nYKlNXRJZMVR7l7pz+b5BsYaBtEh9eBOf+gGgkSnSJzXDzUudD+zT9zRZapfp9JOZWg==",
+    "scriptPublicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8OnaJTpaY93P/X21djOEkZs9YmZhAnfEXUXT4FTa9CdaFE9HOVCFALvPeTV30kl/WLqss8/i4mkapinNfA3gmp0/te/IBl86Qf6yc/x/2brHFlM6YCRHOUA9C5m9N57s59WUYUvDnXat0iRO5g2tn3n83F+mBD/Q4ObNk1M1p3QEO7Wle0xL/UzWYW/ZmeRTn6o/5sLdD8Hj193/uCJ9/W27ex0LF7qTcDzjDBDHGJuo/eL9hkS2lWGBIqC9aL6gzSdirA+zN5+q+oRDdsRoljOXRisT2qB2+NRLuyjcNzCdoKZRxPOC/LpqifIPFbhPnqCFRWHyxVHo4SKPK29VJwIDAQAB",
+    "maxDownloadParallelism": 1,
+    "subscriptionRateLimit": 10,
     "packages": ["Http"],
     "allowEval": false,
-    "allowUrls": ["everywhere"],
-    "_tags": ["unofficial", "broken", "unmaintained"],
-    "scriptSignature": "<ommitted>",
-    "scriptPublicKey": "<ommitted>",
-    "_feeds": {
-      "commits": "https://github.com/Alex-451/grayjay-media.ccc-plugin/commits/main.atom",
-      "releases": "https://github.com/Alex-451/grayjay-media.ccc-plugin/releases.atom"
+    "allowUrls": [
+      "media.ccc.de",
+      "static.media.ccc.de",
+      "cdn.media.ccc.de",
+      "api.media.ccc.de"
+    ],
+    "settings": [
+      {
+        "variable": "preferredLanguage",
+        "name": "Preferred Language",
+        "description": "Filter video/audio sources to show only recordings in this language. 'All Languages' shows every available recording.",
+        "type": "Dropdown",
+        "default": "0",
+        "options": ["All Languages", "English", "Deutsch", "Français"]
+      }
+    ],
+    "changelog": {
+      "1": ["Initial release for media.ccc.de"],
+      "2": [
+        "Video recommendations (shuffled talks from the same conference)",
+        "Subtitles (VTT) with auto-generated indicator and language labels",
+        "Audio-only sources (MP3, Opus) with human-readable language names, translation tagging, and bitrate display",
+        "Home feed pagination into full event archive",
+        "Search within conferences (searchChannelContents)",
+        "Conference search with description matching",
+        "Language filter setting for recordings",
+        "Rich descriptions with speakers, tags, language, and event links",
+        "High-quality poster thumbnails",
+        "Proper frontend URLs for author/channel links",
+        "Bitrate estimation from file size metadata",
+        "Correct error handling with ScriptException"
+      ]
     },
-    "_installUrl": "https://raw.githubusercontent.com/Alex-451/grayjay-media.ccc-plugin/main/MediaCccConfig.json"
+    "_tags": ["unofficial", "working", "maintained"],
+    "_feeds": {
+      "commits": "https://github.com/PixelMelt/grayjay-source-ccc/commits/master.atom",
+      "releases": "https://github.com/PixelMelt/grayjay-source-ccc/releases.atom"
+    },
+    "_installUrl": "https://raw.githubusercontent.com/PixelMelt/grayjay-source-ccc/master/MediaCCCConfig.json"
   },
   {
     "_tags": ["working", "unofficial", "podcast"],
