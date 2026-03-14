@@ -1,15 +1,23 @@
 # Super-linter summary
 
-| Language     | Validation result |
-| ------------ | ----------------- |
-| BIOME_FORMAT | Fail ❌           |
-| BIOME_LINT   | Fail ❌           |
-| PRE_COMMIT   | Pass ✅           |
-| TRIVY        | Pass ✅           |
+| Language                   | Validation result |
+| -------------------------- | ----------------- |
+| BIOME_FORMAT               | Fail ❌           |
+| BIOME_LINT                 | Fail ❌           |
+| GITLEAKS                   | Pass ✅           |
+| GIT_MERGE_CONFLICT_MARKERS | Pass ✅           |
+| JSON                       | Pass ✅           |
+| JSON_PRETTIER              | Pass ✅           |
+| MARKDOWN                   | Pass ✅           |
+| MARKDOWN_PRETTIER          | Pass ✅           |
+| NATURAL_LANGUAGE           | Pass ✅           |
+| PRE_COMMIT                 | Pass ✅           |
+| SPELL_CODESPELL            | Fail ❌           |
+| TRIVY                      | Pass ✅           |
 
 Super-linter detected linting errors
 
-For more information, see the [GitHub Actions workflow run](https://github.com/grayjay-sources/grayjay-sources.github.io/actions/runs/23072765864)
+For more information, see the [GitHub Actions workflow run](https://github.com/grayjay-sources/grayjay-sources.github.io/actions/runs/23087655939)
 
 Powered by [Super-linter](https://github.com/super-linter/super-linter)
 
@@ -18,7 +26,7 @@ Powered by [Super-linter](https://github.com/super-linter/super-linter)
 <summary>BIOME_FORMAT</summary>
 
 ```text
-Checked 10 files in 585ms. No fixes applied.
+Checked 10 files in 546ms. No fixes applied.
 Found 10 errors..vscode/launch.json format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   × Formatter would have printed the following content:
@@ -1359,7 +1367,7 @@ format ━━━━━━━━━━━━━━━━━━━━━━━━�
 ```text
 The number of diagnostics exceeds the limit allowed. Use --max-diagnostics to increase it.
 Diagnostics not shown: 4082.
-Checked 13 files in 83s. No fixes applied.
+Checked 13 files in 80s. No fixes applied.
 Found 277 errors.
 Found 3814 warnings.
 Found 11 infos.assets/js/site.js:77:20 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1764,6 +1772,25 @@ lint ━━━━━━━━━━━━━━━━━━━━━━━━━
 
   × Some warnings were emitted while running checks.
 
+```
+
+</details>
+
+<details>
+
+<summary>SPELL_CODESPELL</summary>
+
+```text
+/github/workspace/sources.json:1377: Nam ==> Name
+/github/workspace/sources.json:1670: Nam ==> Name
+/github/workspace/sources.json:1807: ommitted ==> omitted
+/github/workspace/sources.json:1808: ommitted ==> omitted
+/github/workspace/sources.json:3473: comming ==> coming
+/github/workspace/sources.json:3681: necesities ==> necessities
+/github/workspace/sources.json:3693: necesities ==> necessities
+/github/workspace/sources.json:3705: necesities ==> necessities
+/github/workspace/sources.json:4021: didnt ==> didn't
+/github/workspace/sources.json:4426: te ==> the, be, we, to
 ```
 
 </details>
