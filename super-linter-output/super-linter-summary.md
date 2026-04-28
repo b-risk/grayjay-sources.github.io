@@ -6,8 +6,6 @@
 | BIOME_LINT                 | Fail ❌           |
 | GITLEAKS                   | Pass ✅           |
 | GIT_MERGE_CONFLICT_MARKERS | Pass ✅           |
-| JAVASCRIPT_ES              | Fail ❌           |
-| JAVASCRIPT_PRETTIER        | Pass ✅           |
 | JSON                       | Pass ✅           |
 | JSON_PRETTIER              | Pass ✅           |
 | PRE_COMMIT                 | Pass ✅           |
@@ -16,7 +14,7 @@
 
 Super-linter detected linting errors
 
-For more information, see the [GitHub Actions workflow run](https://github.com/grayjay-sources/grayjay-sources.github.io/actions/runs/25074406267)
+For more information, see the [GitHub Actions workflow run](https://github.com/grayjay-sources/grayjay-sources.github.io/actions/runs/25074592525)
 
 Powered by [Super-linter](https://github.com/super-linter/super-linter)
 
@@ -25,7 +23,7 @@ Powered by [Super-linter](https://github.com/super-linter/super-linter)
 <summary>BIOME_FORMAT</summary>
 
 ```text
-Checked 10 files in 471ms. No fixes applied.
+Checked 10 files in 469ms. No fixes applied.
 Found 10 errors..vscode/launch.json format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   × Formatter would have printed the following content:
@@ -1191,7 +1189,7 @@ sources.json format ━━━━━━━━━━━━━━━━━━━━
      148      │ - ················"Support·for·getHome",
      149      │ - ················"Added·Faster·Randomizer·setting·for·logged·in·users",
      150      │ - ················"Added·Content·Groupings·setting",
-  10139 more lines truncated
+  10336 more lines truncated
 
 
 sources.schema.json format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1366,7 +1364,7 @@ format ━━━━━━━━━━━━━━━━━━━━━━━━�
 ```text
 The number of diagnostics exceeds the limit allowed. Use --max-diagnostics to increase it.
 Diagnostics not shown: 4427.
-Checked 13 files in 1285ms. No fixes applied.
+Checked 13 files in 1242ms. No fixes applied.
 Found 547 errors.
 Found 3889 warnings.
 Found 11 infos.assets/css/site.css:78:18 lint/complexity/noImportantStyles  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1720,32 +1718,6 @@ lint ━━━━━━━━━━━━━━━━━━━━━━━━━
 
 <details>
 
-<summary>JAVASCRIPT_ES</summary>
-
-```text
-
-/github/workspace/assets/js/site.js
-    1:1   error  'filters' is not defined                                                   no-undef
-   57:15  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
-   58:21  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
-   79:13  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
-   80:13  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
-   94:18  error  'QRious' is not defined                                                    no-undef
-  206:10  error  'filterItems' is defined but never used                                    no-unused-vars
-  212:9   error  'hiddenTags' is not defined                                                no-undef
-  215:24  error  'hiddenTags' is not defined                                                no-undef
-  265:3   error  'html' is not defined                                                      no-undef
-  267:5   error  'html' is not defined                                                      no-undef
-  269:10  error  'html' is not defined                                                      no-undef
-  274:71  error  'filters' is not defined                                                   no-undef
-
-✖ 13 problems (13 errors, 0 warnings)Warning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .
-```
-
-</details>
-
-<details>
-
 <summary>SPELL_CODESPELL</summary>
 
 ```text
@@ -1753,12 +1725,12 @@ lint ━━━━━━━━━━━━━━━━━━━━━━━━━
 /github/workspace/sources.json:1670: Nam ==> Name
 /github/workspace/sources.json:1807: ommitted ==> omitted
 /github/workspace/sources.json:1808: ommitted ==> omitted
-/github/workspace/sources.json:3567: comming ==> coming
-/github/workspace/sources.json:3775: necesities ==> necessities
-/github/workspace/sources.json:3787: necesities ==> necessities
-/github/workspace/sources.json:3799: necesities ==> necessities
-/github/workspace/sources.json:4115: didnt ==> didn't
-/github/workspace/sources.json:4520: te ==> the, be, we, to
+/github/workspace/sources.json:3654: comming ==> coming
+/github/workspace/sources.json:3862: necesities ==> necessities
+/github/workspace/sources.json:3874: necesities ==> necessities
+/github/workspace/sources.json:3886: necesities ==> necessities
+/github/workspace/sources.json:4202: didnt ==> didn't
+/github/workspace/sources.json:4607: te ==> the, be, we, to
 ```
 
 </details>
