@@ -269,8 +269,7 @@ function generateFilters(filters) {
   return html;
 }
 document.addEventListener("DOMContentLoaded", () => {
-  const url =
-    "https://raw.githubusercontent.com/grayjay-sources/repo/main/sources.json";
+  const url = new URL("sources.json", window.location.href).href;
   populateCardsContainer(url);
   document.getElementById("footerLinks").innerHTML += generateFilters(filters);
   document.querySelectorAll("#bd-qrcodes").forEach((toggle) => {

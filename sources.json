@@ -4602,5 +4602,120 @@
         "Initial release with support for Xbox Clips homepage, game pages, channel pages, and video playback"
       ]
     }
-  }
+  },
+  {
+    "name": "SuperCartoons",
+    "description": "Watch classic cartoons from SuperCartoons.net",
+    "author": "Catcall0284",
+    "authorUrl": "https://github.com/Catcall0284",
+    "platformUrl": "https://www.supercartoons.net",
+    "sourceUrl": "https://codeberg.org/Catcall0284/Grayjay_Plugin_SuperCartoons/raw/main/SuperCartoonsConfig.json",
+    "repositoryUrl": "https://codeberg.org/Catcall0284/Grayjay_Plugin_SuperCartoons",
+    "scriptUrl": "https://codeberg.org/Catcall0284/Grayjay_Plugin_SuperCartoons/raw/main/SuperCartoonsScript.js",
+    "version": 1,
+    "iconUrl": "./supercartoons.png",
+    "id": "a5f9f9a4-8d6a-4a4b-8f6c-5a4d7a8b9c6d",
+    "scriptSignature": "",
+    "scriptPublicKey": "",
+    "packages": [
+      "Http",
+      "DOMParser"
+    ],
+    "allowEval": false,
+    "allowUrls": [
+      "supercartoons.net",
+      "www.supercartoons.net"
+    ],
+    "authentication": null,
+    "settings": [],
+    "changelog": {
+      "1": [
+        "Initial version"
+      ]
+    }
+  },
+  {
+    "name": "ScreenRant",
+    "description": "A plugin that adds ScreenRant Videos as a source",
+    "author": "safapoc449",
+    "authorUrl": "https://codeberg.org/safapoc449",
+    "platformUrl": "https://screenrant.com/videos/",
+    "sourceUrl": "https://codeberg.org/safapoc449/ScreenRant-Plugin-Grayjay/raw/branch/main/grayjay-plugin-screenrant-com-videos-config.json",
+    "repositoryUrl": "https://codeberg.org/safapoc449/ScreenRant-Plugin-Grayjay",
+    "scriptUrl": "https://codeberg.org/safapoc449/ScreenRant-Plugin-Grayjay/raw/branch/main/grayjay-plugin-screenrant-com-videos-script.js",
+    "version": 1,
+    "iconUrl": "https://screenrant.com/public/build/images/favicon-240x240.png",
+    "id": "fac8360d-a6fa-4f30-9be1-b3e29697176c",
+    "scriptSignature": "",
+    "scriptPublicKey": "",
+    "packages": [
+      "Http",
+      "DOMParser"
+    ],
+    "allowUrls": [
+      ".screenrant.com"
+    ],
+    "testing": {
+      "Homepage": {
+        "urls": [
+          "https://screenrant.com/videos/"
+        ]
+      },
+      "AutumnSummerTrailer": {
+        "urls": [
+          "https://screenrant.com/videos/video/autumn-summer-movie-lukita-maxwell-mark-mckenna-trailer/"
+        ]
+      }
+    },
+    "changelog": {
+      "1": [
+        "Initial version"
+      ]
+    }
+  },
+  {
+    "name": "LG Channels",
+    "description": "LG Channels is LG's free streaming service",
+    "author": "Catcall0284",
+    "authorUrl": "https://codeberg.org/Catcall0284",
+    "platformUrl": "https://lgchannels.com",
+    "sourceUrl": "https://codeberg.org/Catcall0284/Grayjay_Plugin_LG_Channels/raw/main/LGChannelsConfig.json",
+    "repositoryUrl": "https://codeberg.org/Catcall0284/Grayjay_Plugin_LG_Channels",
+    "scriptUrl": "https://codeberg.org/Catcall0284/Grayjay_Plugin_LG_Channels/raw/main/LGChannelsScript.js",
+    "version": 2,
+    "iconUrl": "./lgchannels.png",
+    "id": "983bc572-837b-4227-87cf-9fdf6f6b5e64",
+    "scriptSignature": "",
+    "scriptPublicKey": "",
+    "packages": [
+      "Http"
+    ],
+    "allowEval": false,
+    "allowAllHttpHeaderAccess": true,
+    "allowUrls": [
+      ".lgchannels.com",
+      "api.lgchannels.com",
+      ".cloudfront.net",
+      ".amagi.tv",
+      ".wurl.tv",
+      ".transmit.live",
+      ".mediatailor.us-east-1.amazonaws.com",
+      ".xumo.com",
+      ".frequency.com",
+      ".ottera.tv",
+      ".stingray.com",
+      "img.platform.wurl.dev",
+      ".tsv2.amagi.tv",
+      ".playouts.now.amagi.tv",
+      ".global.transmit.live",
+      ".lotus.stingray.com",
+      ".cdn-uw2-prod.tsv2.amagi.tv",
+      ".wurl.com"
+    ],
+    "changelog": {
+      "1": [
+        "Initial version"
+      ]
+    }
+}
 ]
