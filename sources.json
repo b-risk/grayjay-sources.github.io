@@ -4783,5 +4783,65 @@
         "Initial release with support for Xbox Clips homepage, game pages, channel pages, and video playback"
       ]
     }
+  },
+  {
+  "id": "3c990f53-1024-424e-aa51-c62e1ee6a3ba",
+  "name": "Arazu",
+  "description": "LSF Mirror",
+  "version": 1,
+  "author": "Stefan Cruz",
+  "authorUrl": "",
+  "platformUrl": "https://arazu.io",
+  "repositoryUrl": "https://github.com/stefancruz/grayjay-plugin-arazu",
+  "sourceUrl": "https://stefancruz.github.io/grayjay-plugin-arazu/ArazuConfig.json",
+  "scriptUrl": "./ArazuScript.js",
+  "iconUrl": "./ArazuIcon.png",
+  "scriptSignature": "",
+  "scriptPublicKey": "",
+  "packages": ["Http", "DOMParser"],
+  "allowEval": false,
+  "allowUrls": [
+    "api.arazu.io",
+    "cdn.arazu.io",
+    "arazu.io"
+  ],
+  "constants": {
+    "BASE_URL": "https://arazu.io"
+  },
+  "settings": [
+    {
+      "variable": "homeCategoryIndex",
+      "name": "Home Feed Category",
+      "description": "Default sorting category for the home feed.",
+      "type": "Dropdown",
+      "default": "1",
+      "options": ["Hot", "New", "Top"]
+    },
+    {
+      "variable": "homeTimeframeIndex",
+      "name": "Home Feed Timeframe",
+      "description": "Default time range for the home feed.",
+      "type": "Dropdown",
+      "default": "0",
+      "options": ["All Time", "Today", "This Week", "This Month", "This Year"]
+    }
+  ],
+  "testing": {
+    "GetContentDetails": {
+      "urls": [
+        "https://arazu.io/t3_1sqq87s/",
+        "https://arazu.io/t3_1sqfy3z/",
+        "https://arazu.io/t3_1spttcn/"
+      ]
+    },
+    "GetChannel": {
+      "urls": [
+        "https://arazu.io/?channel=reddit&category=top&timeframe=all"
+      ]
+    }
+  },
+  "changelog": {
+    "1": ["- Initial implementation"]
   }
+}
 ]
