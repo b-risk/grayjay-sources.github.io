@@ -6,18 +6,17 @@
 | BIOME_LINT                 | Fail ❌           |
 | GITLEAKS                   | Pass ✅           |
 | GIT_MERGE_CONFLICT_MARKERS | Pass ✅           |
+| JAVASCRIPT_ES              | Fail ❌           |
+| JAVASCRIPT_PRETTIER        | Pass ✅           |
 | JSON                       | Pass ✅           |
 | JSON_PRETTIER              | Pass ✅           |
-| MARKDOWN                   | Pass ✅           |
-| MARKDOWN_PRETTIER          | Pass ✅           |
-| NATURAL_LANGUAGE           | Pass ✅           |
 | PRE_COMMIT                 | Pass ✅           |
 | SPELL_CODESPELL            | Fail ❌           |
 | TRIVY                      | Pass ✅           |
 
 Super-linter detected linting errors
 
-For more information, see the [GitHub Actions workflow run](https://github.com/grayjay-sources/grayjay-sources.github.io/actions/runs/23087655939)
+For more information, see the [GitHub Actions workflow run](https://github.com/grayjay-sources/grayjay-sources.github.io/actions/runs/25074406267)
 
 Powered by [Super-linter](https://github.com/super-linter/super-linter)
 
@@ -26,7 +25,7 @@ Powered by [Super-linter](https://github.com/super-linter/super-linter)
 <summary>BIOME_FORMAT</summary>
 
 ```text
-Checked 10 files in 546ms. No fixes applied.
+Checked 10 files in 471ms. No fixes applied.
 Found 10 errors..vscode/launch.json format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   × Formatter would have printed the following content:
@@ -1035,7 +1034,7 @@ assets/js/site.js format ━━━━━━━━━━━━━━━━━━�
          76 │ + → if·(varExists(data.scriptUrl))·{
          77 │ + → → data.baseUrl·=·removeLast(data.sourceUrl,·"/")·+·"/";
          78 │ + → }
-  344 more lines truncated
+  342 more lines truncated
 
 
 sources.json format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1192,7 +1191,7 @@ sources.json format ━━━━━━━━━━━━━━━━━━━━
      148      │ - ················"Support·for·getHome",
      149      │ - ················"Added·Faster·Randomizer·setting·for·logged·in·users",
      150      │ - ················"Added·Content·Groupings·setting",
-  9930 more lines truncated
+  10139 more lines truncated
 
 
 sources.schema.json format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1366,53 +1365,11 @@ format ━━━━━━━━━━━━━━━━━━━━━━━━�
 
 ```text
 The number of diagnostics exceeds the limit allowed. Use --max-diagnostics to increase it.
-Diagnostics not shown: 4082.
-Checked 13 files in 80s. No fixes applied.
-Found 277 errors.
-Found 3814 warnings.
-Found 11 infos.assets/js/site.js:77:20 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  i Template literals are preferred over string concatenation.
-
-    75 │ function fixData(data) {
-    76 │   if (varExists(data.scriptUrl)) {
-  > 77 │     data.baseUrl = removeLast(data.sourceUrl, "/") + "/";
-       │                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    78 │   }
-    79 │   if (!data.hasOwnProperty("_feeds")) data._feeds = {};
-
-  i Unsafe fix: Use a template literal.
-
-     75  75 │   function fixData(data) {
-     76  76 │     if (varExists(data.scriptUrl)) {
-     77     │ - ····data.baseUrl·=·removeLast(data.sourceUrl,·"/")·+·"/";
-         77 │ + ····data.baseUrl·=·`${removeLast(data.sourceUrl,·"/")}/`;
-     78  78 │     }
-     79  79 │     if (!data.hasOwnProperty("_feeds")) data._feeds = {};
-
-
-assets/js/site.js:85:14 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  i Template literals are preferred over string concatenation.
-
-    83 │       if (Array.isArray(value)) continue;
-    84 │       if (isRelativeUrl(value)) {
-  > 85 │         data[key + "_"] = value;
-       │              ^^^^^^^^^
-    86 │         data[key] = getAbsoluteUrl(value, data.baseUrl);
-    87 │       }
-
-  i Unsafe fix: Use a template literal.
-
-     83  83 │         if (Array.isArray(value)) continue;
-     84  84 │         if (isRelativeUrl(value)) {
-     85     │ - ········data[key·+·"_"]·=·value;
-         85 │ + ········data[`${key}_`]·=·value;
-     86  86 │           data[key] = getAbsoluteUrl(value, data.baseUrl);
-     87  87 │         }
-
-
-assets/css/site.css:78:18 lint/complexity/noImportantStyles  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Diagnostics not shown: 4427.
+Checked 13 files in 1285ms. No fixes applied.
+Found 547 errors.
+Found 3889 warnings.
+Found 11 infos.assets/css/site.css:78:18 lint/complexity/noImportantStyles  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   ! Avoid the use of the !important style.
 
@@ -1428,177 +1385,6 @@ assets/css/site.css:78:18 lint/complexity/noImportantStyles  FIXABLE  ━━━�
 
     78 │ ··display:·block·!important;
        │                 -----------
-
-assets/js/site.js:57:15 lint/suspicious/noPrototypeBuiltins  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  ! Do not access Object.prototype method 'hasOwnProperty' from target object.
-
-    55 │   const urls = [];
-    56 │   data.forEach((item) => {
-  > 57 │     if (!item.hasOwnProperty("_feeds")) return;
-       │               ^^^^^^^^^^^^^^
-    58 │     if (item._feeds.hasOwnProperty(key)) {
-    59 │       urls.push(encodeURI(item._feeds[key]));
-
-  i It's recommended using Object.hasOwn() instead of using Object.hasOwnProperty().
-
-  i See MDN web docs for more details.
-
-  i Safe fix: Use 'Object.hasOwn()' instead.
-
-     55  55 │     const urls = [];
-     56  56 │     data.forEach((item) => {
-     57     │ - ····if·(!item.hasOwnProperty("_feeds"))·return;
-         57 │ + ····if·(!Object.hasOwn(item,·"_feeds"))·return;
-     58  58 │       if (item._feeds.hasOwnProperty(key)) {
-     59  59 │         urls.push(encodeURI(item._feeds[key]));
-
-
-assets/js/site.js:58:21 lint/suspicious/noPrototypeBuiltins  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  ! Do not access Object.prototype method 'hasOwnProperty' from target object.
-
-    56 │   data.forEach((item) => {
-    57 │     if (!item.hasOwnProperty("_feeds")) return;
-  > 58 │     if (item._feeds.hasOwnProperty(key)) {
-       │                     ^^^^^^^^^^^^^^
-    59 │       urls.push(encodeURI(item._feeds[key]));
-    60 │     }
-
-  i It's recommended using Object.hasOwn() instead of using Object.hasOwnProperty().
-
-  i See MDN web docs for more details.
-
-  i Safe fix: Use 'Object.hasOwn()' instead.
-
-     56  56 │     data.forEach((item) => {
-     57  57 │       if (!item.hasOwnProperty("_feeds")) return;
-     58     │ - ····if·(item._feeds.hasOwnProperty(key))·{
-         58 │ + ····if·(Object.hasOwn(item._feeds,·key))·{
-     59  59 │         urls.push(encodeURI(item._feeds[key]));
-     60  60 │       }
-
-
-assets/js/site.js:79:13 lint/suspicious/noPrototypeBuiltins  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  ! Do not access Object.prototype method 'hasOwnProperty' from target object.
-
-    77 │     data.baseUrl = removeLast(data.sourceUrl, "/") + "/";
-    78 │   }
-  > 79 │   if (!data.hasOwnProperty("_feeds")) data._feeds = {};
-       │             ^^^^^^^^^^^^^^
-    80 │   if (!data.hasOwnProperty("_tags")) data._tags = [];
-    81 │   for (const [key, value] of Object.entries(data)) {
-
-  i It's recommended using Object.hasOwn() instead of using Object.hasOwnProperty().
-
-  i See MDN web docs for more details.
-
-  i Safe fix: Use 'Object.hasOwn()' instead.
-
-     77  77 │       data.baseUrl = removeLast(data.sourceUrl, "/") + "/";
-     78  78 │     }
-     79     │ - ··if·(!data.hasOwnProperty("_feeds"))·data._feeds·=·{};
-         79 │ + ··if·(!Object.hasOwn(data,·"_feeds"))·data._feeds·=·{};
-     80  80 │     if (!data.hasOwnProperty("_tags")) data._tags = [];
-     81  81 │     for (const [key, value] of Object.entries(data)) {
-
-
-assets/js/site.js:80:13 lint/suspicious/noPrototypeBuiltins  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  ! Do not access Object.prototype method 'hasOwnProperty' from target object.
-
-    78 │   }
-    79 │   if (!data.hasOwnProperty("_feeds")) data._feeds = {};
-  > 80 │   if (!data.hasOwnProperty("_tags")) data._tags = [];
-       │             ^^^^^^^^^^^^^^
-    81 │   for (const [key, value] of Object.entries(data)) {
-    82 │     if (key.toLowerCase().includes("url")) {
-
-  i It's recommended using Object.hasOwn() instead of using Object.hasOwnProperty().
-
-  i See MDN web docs for more details.
-
-  i Safe fix: Use 'Object.hasOwn()' instead.
-
-     78  78 │     }
-     79  79 │     if (!data.hasOwnProperty("_feeds")) data._feeds = {};
-     80     │ - ··if·(!data.hasOwnProperty("_tags"))·data._tags·=·[];
-         80 │ + ··if·(!Object.hasOwn(data,·"_tags"))·data._tags·=·[];
-     81  81 │     for (const [key, value] of Object.entries(data)) {
-     82  82 │       if (key.toLowerCase().includes("url")) {
-
-
-assets/js/site.js:206:10 lint/correctness/noUnusedVariables  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  ! This function filterItems is unused.
-
-    204 │   navbarMenu.appendChild(listItemElement);
-    205 │ }
-  > 206 │ function filterItems(items) {
-        │          ^^^^^^^^^^^
-    207 │   // Function to filter items based on hidden tags
-    208 │   return items.filter((item) => {
-
-  i Unused variables are often the result of typos, incomplete refactors, or other sources of bugs.
-
-  i Unsafe fix: If this is intentional, prepend filterItems with an underscore.
-
-    204 204 │     navbarMenu.appendChild(listItemElement);
-    205 205 │   }
-    206     │ - function·filterItems(items)·{
-        206 │ + function·_filterItems(items)·{
-    207 207 │     // Function to filter items based on hidden tags
-    208 208 │     return items.filter((item) => {
-
-
-assets/js/site.js:221:5 lint/style/useConst  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  ! This let declares a variable that is only assigned once.
-
-    219 │   try {
-    220 │     const response = await fetch(url);
-  > 221 │     let data = await response.json();
-        │     ^^^
-    222 │     const cardsContainer = document.getElementById("cards-container");
-    223 │     cardsContainer.innerHTML = "";
-
-  i 'data' is never reassigned.
-
-    219 │   try {
-    220 │     const response = await fetch(url);
-  > 221 │     let data = await response.json();
-        │         ^^^^
-    222 │     const cardsContainer = document.getElementById("cards-container");
-    223 │     cardsContainer.innerHTML = "";
-
-  i Safe fix: Use const instead.
-
-    219 219 │     try {
-    220 220 │       const response = await fetch(url);
-    221     │ - ····let·data·=·await·response.json();
-        221 │ + ····const·data·=·await·response.json();
-    222 222 │       const cardsContainer = document.getElementById("cards-container");
-    223 223 │       cardsContainer.innerHTML = "";
-
-
-assets/js/site.js:247:23 lint/suspicious/noDoubleEquals  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  × Using == may be unsafe if you are relying on type coercion.
-
-    245 │   const firstSourceIcon = document.getElementsByClassName("source-icon")[0];
-    246 │   const sourceIconStyle = firstSourceIcon.getAttribute("style");
-  > 247 │   if (sourceIconStyle == "display:block") {
-        │                       ^^
-    248 │     document.querySelectorAll(".source-icon").forEach((element) => {
-    249 │       element.setAttribute("style", "display:none");
-
-  i == is only allowed when comparing against null.
-
-  i Unsafe fix: Use === instead.
-
-    247 │ ··if·(sourceIconStyle·===·"display:block")·{
-        │                         +
 
 index.html:117:108 parse ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -1699,6 +1485,143 @@ index.html:177:41 parse ━━━━━━━━━━━━━━━━━━�
     179 │       <p class="mb-1">This page is not affiliated with <a href="https://grayjay.app/">GrayJay</a> or <a href="https://futo.org/">FUTO</a>!</p>
 
 
+index.html:27:3 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    26 │ <body>
+  > 27 │   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+       │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 28 │     <symbol id="check2" viewBox="0 0 16 16">
+        ...
+  > 44 │     </symbol>
+  > 45 │   </svg>
+       │   ^^^^^^
+    46 │   <!-- region theme toggle -->
+    47 │   <div class=" dropdown position-fixed bottom-0 start-0 mb-1 me-3 bd-mode-toggle"> <!-- needs fixing -->
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
+index.html:50:7 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    48 │     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+    49 │       aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+  > 50 │       <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+       │       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 51 │         <use href="#circle-half"></use>
+  > 52 │       </svg>
+       │       ^^^^^^
+    53 │       <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    54 │     </button>
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
+index.html:59:11 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    57 │         <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+    58 │           aria-pressed="false">
+  > 59 │           <svg class="bi me-2 opacity-50" width="1em" height="1em">
+       │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 60 │             <use href="#sun-fill"></use>
+  > 61 │           </svg>
+       │           ^^^^^^
+    62 │           Light
+    63 │           <svg class="bi ms-auto d-none" width="1em" height="1em">
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
+index.html:63:11 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    61 │           </svg>
+    62 │           Light
+  > 63 │           <svg class="bi ms-auto d-none" width="1em" height="1em">
+       │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 64 │             <use href="#check2"></use>
+  > 65 │           </svg>
+       │           ^^^^^^
+    66 │         </button>
+    67 │       </li>
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
+index.html:71:11 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    69 │         <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+    70 │           aria-pressed="false">
+  > 71 │           <svg class="bi me-2 opacity-50" width="1em" height="1em">
+       │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 72 │             <use href="#moon-stars-fill"></use>
+  > 73 │           </svg>
+       │           ^^^^^^
+    74 │           Dark
+    75 │           <svg class="bi ms-auto d-none" width="1em" height="1em">
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
+index.html:75:11 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    73 │           </svg>
+    74 │           Dark
+  > 75 │           <svg class="bi ms-auto d-none" width="1em" height="1em">
+       │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 76 │             <use href="#check2"></use>
+  > 77 │           </svg>
+       │           ^^^^^^
+    78 │         </button>
+    79 │       </li>
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
+index.html:83:11 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    81 │         <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+    82 │           aria-pressed="true">
+  > 83 │           <svg class="bi me-2 opacity-50" width="1em" height="1em">
+       │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 84 │             <use href="#circle-half"></use>
+  > 85 │           </svg>
+       │           ^^^^^^
+    86 │           Auto
+    87 │           <svg class="bi ms-auto d-none" width="1em" height="1em">
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
+index.html:87:11 lint/a11y/noSvgWithoutTitle ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Alternative text title element cannot be empty
+
+    85 │           </svg>
+    86 │           Auto
+  > 87 │           <svg class="bi ms-auto d-none" width="1em" height="1em">
+       │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 88 │             <use href="#check2"></use>
+  > 89 │           </svg>
+       │           ^^^^^^
+    90 │         </button>
+    91 │       </li>
+
+  i For accessibility purposes, SVGs should have an alternative text, provided via title element. If the svg element has role="img", you should add the aria-label or aria-labelledby attribute.
+
+
 repo/index.html:1:1 parse ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   × Unescaped `<` bracket character. Expected a tag or escaped character.
@@ -1768,10 +1691,55 @@ repo/index.html:22:1 parse ━━━━━━━━━━━━━━━━━�
        │
 
 
+repo/index.html:3:1 lint/a11y/useHtmlLang ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Provide a lang attribute when using the html element.
+
+     1 │ <?php header('Location: https://grayjay-sources.github.io'); ?>
+     2 │ <!doctype html>
+   > 3 │ <html>
+       │ ^^^^^^
+   > 4 │   <head>
+        ...
+  > 19 │     </script>
+  > 20 │   </body>
+  > 21 │ </html>
+       │ ^^^^^^^
+    22 │
+
+  i Setting a lang attribute on HTML document elements configures the language used by screen readers when no user default is specified.
+
+
 lint ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   × Some warnings were emitted while running checks.
 
+```
+
+</details>
+
+<details>
+
+<summary>JAVASCRIPT_ES</summary>
+
+```text
+
+/github/workspace/assets/js/site.js
+    1:1   error  'filters' is not defined                                                   no-undef
+   57:15  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   58:21  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   79:13  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   80:13  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   94:18  error  'QRious' is not defined                                                    no-undef
+  206:10  error  'filterItems' is defined but never used                                    no-unused-vars
+  212:9   error  'hiddenTags' is not defined                                                no-undef
+  215:24  error  'hiddenTags' is not defined                                                no-undef
+  265:3   error  'html' is not defined                                                      no-undef
+  267:5   error  'html' is not defined                                                      no-undef
+  269:10  error  'html' is not defined                                                      no-undef
+  274:71  error  'filters' is not defined                                                   no-undef
+
+✖ 13 problems (13 errors, 0 warnings)Warning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .
 ```
 
 </details>
@@ -1785,12 +1753,12 @@ lint ━━━━━━━━━━━━━━━━━━━━━━━━━
 /github/workspace/sources.json:1670: Nam ==> Name
 /github/workspace/sources.json:1807: ommitted ==> omitted
 /github/workspace/sources.json:1808: ommitted ==> omitted
-/github/workspace/sources.json:3473: comming ==> coming
-/github/workspace/sources.json:3681: necesities ==> necessities
-/github/workspace/sources.json:3693: necesities ==> necessities
-/github/workspace/sources.json:3705: necesities ==> necessities
-/github/workspace/sources.json:4021: didnt ==> didn't
-/github/workspace/sources.json:4426: te ==> the, be, we, to
+/github/workspace/sources.json:3567: comming ==> coming
+/github/workspace/sources.json:3775: necesities ==> necessities
+/github/workspace/sources.json:3787: necesities ==> necessities
+/github/workspace/sources.json:3799: necesities ==> necessities
+/github/workspace/sources.json:4115: didnt ==> didn't
+/github/workspace/sources.json:4520: te ==> the, be, we, to
 ```
 
 </details>
